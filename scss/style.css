@@ -330,7 +330,7 @@ footer p {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url("https://mutante.org/especiales/mural-cuchas/evidencias/13.jpeg");
+  background-image: url("../assets/images/collage.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
