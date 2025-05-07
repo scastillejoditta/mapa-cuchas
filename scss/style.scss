@@ -1,0 +1,852 @@
+/* fuentes locales*/
+
+@font-face {
+    font-family: 'texto';
+    src: url("../assets/fonts/Space_Mono/SpaceMono-Regular.ttf"); }
+  
+  @font-face {
+    font-family: 'titulos';
+    src: url("../assets/fonts/Denim/Denim-Bold.otf"); }
+  
+  @font-face {
+    font-family: 'leyenda';
+    src: url("../assets/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf"); }
+
+/* -------------*/
+
+/* colores */
+$gris_mutante: #e5e6df;
+$verde_mutante: #92ff64;
+$rosa_mutante: #e01e5a;
+$azul_mutante: #5da2f8;// #040404;
+$verde_ocuro_mutante: #00c25e;
+$naranja_mutante:#ff5700;
+$negro:#000000;
+$amarillo:#f9ff32;
+
+/* -------------*/
+/* inicializar propiedades*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body 
+{
+    padding-top: 70px;
+    font-family: 'texto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.aglos {
+    text-decoration: none;
+    color: $negro;
+    border-bottom: 2px $rosa_mutante dotted;
+    
+    &:hover
+    {
+        color: $rosa_mutante;
+    }
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  margin: 1em auto 1em auto;
+  font-family: 'texto', sans-serif;
+  font-size: 0.8em;
+}
+
+.footer
+{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 3em 0 3em 0;
+
+    &__logo
+    {
+        width: 15%;
+        margin: 1em;
+
+        &-img
+        {
+            width: 100%; 
+        }
+       
+    }
+}
+
+.container-fluid
+{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.navbar
+{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    box-shadow: 0 8px 60px black;
+    z-index:2;
+
+}
+
+.navbar-brand img
+{
+  width: 160px;
+}
+
+.navbar-toggler
+{
+  width: 60px;
+  height: 50px;
+  padding: 5px;
+
+  &:hover .mLine
+  {
+      stroke: $verde_mutante;
+  }
+
+  &:hover
+  {
+    border-color: $verde_mutante;
+  }
+}
+
+.navbar-nav
+{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'titulos', sans-serif;
+  text-transform: uppercase;
+
+  .nav-item
+  { 
+      font-size: 1em;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      
+      transition: border-bottom .3s linear;
+
+      a
+      {
+        color: black;
+        border-bottom: 4px #fff solid;
+
+          &:hover {
+            //background-color: $limon;
+            color: $verde_mutante; 
+            border-bottom: 4px $verde_mutante solid;
+        }
+      } 
+
+  }
+
+ 
+
+}
+
+.mouse-scroll {
+    display: block;
+  }
+
+ #ancla2 {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+
+  .mouse-scroll span{
+    display: block;
+    width: 5px; 
+    height: 5px;
+    transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 2px solid #fff; 
+    border-bottom: 2px solid #fff;
+    margin: 0 0 3px 5px;
+  }
+ .mouse-scroll .mouse {
+    height: 21px;
+    width: 14px;
+    border-radius: 10px;
+    transform: none;
+    border: 2px solid #fff;
+    top: 170px;
+  }
+  .mouse-scroll .down-arrow-1 {
+    margin-top: 6px;
+  }
+ .mouse-scroll .down-arrow-1,.mouse-scroll .down-arrow-2,.mouse-scroll .down-arrow-3 {
+    animation: mouse-scroll 1s infinite; 
+  }
+ .mouse-scroll .down-arrow-1 {
+     animation-delay: .1s; 
+     animation-direction: alternate;
+  }
+ .mouse-scroll .down-arrow-2 {
+    animation-delay: .2s; 
+    animation-direction: alternate;
+  }
+ .mouse-scroll .down-arrow-3 {
+    animation-delay: .3s;
+    animation-direction: alternate;
+  }
+ .mouse-scroll .mouse-in {
+    height: 5px;
+    width: 2px;
+    display: block; 
+    margin: 5px auto;
+    background:#fff;
+    position: relative;
+  }
+ .mouse-scroll .mouse-in {
+   animation: animated-mouse 1.2s ease infinite;
+  }
+  
+  @keyframes animated-mouse {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+       opacity: 0;
+      transform: translateY(6px);
+    }
+  }
+  @-webkit-keyframes mouse-scroll {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    } 
+  }
+  @keyframes mouse-scroll {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 990px)
+  {
+
+    .navbar-brand img
+    {
+      width: 140px;
+    }
+
+    .nav-item a
+    { 
+        padding: 0;
+        margin: 0;
+    }
+  }
+
+/* -------------------------------------------- */
+/* ------------ intro ------------------- */
+/* -------------------------------------------- */
+
+.intro {
+    min-width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 40px;
+    background-color: $amarillo; //#18a477;
+    
+    
+    &__texto
+     {
+         width: 50%;
+         padding-top: 2em;
+     }
+}
+
+.intro h1 {
+    font-family: 'titulos', sans-serif;
+    text-transform: uppercase;
+    font-size: 5em;
+    margin-bottom: 5px;
+    text-align: center;
+    color: $negro;
+}
+
+.intro h2 {
+    font-family: 'leyenda', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 2em;
+    text-align: center;
+    color: $negro;
+}
+
+.intro small, .mapa small {
+   color:$rosa_mutante;
+    font-weight: bold;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+.intro .fecha { color: $negro; font-style: italic; line-height:250%;}
+
+
+.descargar__guia
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 5px;
+    width: 205px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; //$gris_mutante;
+    border-radius: 7px;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0.8;
+    transition: all .6s;
+    margin-bottom: 5em;
+
+    img {
+        display: block;
+        width: 100px;
+        margin: 0;
+        padding: 0;
+    }
+
+    small
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+        color: $negro;
+    }
+}
+
+
+.descargar__guia:hover {
+    opacity: 1;
+    //background-color:  rgba(214, 253, 49, 40%);
+    transform: translateY(-30px);
+    border: solid 1px $rosa_mutante;
+}
+
+.descargar__guia:hover small {
+    color: $rosa_mutante;
+}
+
+/* -------------------------------------------- */
+/* ------------- Fotografía -------------------- */
+/* -------------------------------------------- */
+
+.fotografia
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("https://mutante.org/especiales/mural-cuchas/evidencias/13.jpeg"); //url("../assets/images/collage.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    padding-bottom:0;
+    //border: 2px solid red;
+   /* &__grullas
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;    
+        background-image: url("../assets/guia/grullas_verdes.svg");
+        background-size: 50%;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        
+   // background-attachment: fixed;
+    }*/
+
+    &__nota
+    {
+        position: absolute;
+        right: 20px;
+        bottom: 10%;
+        width: 55%;
+        font-family: 'leyenda', sans-serif;
+
+        .pie {
+            color: #fff;
+            font-size: 1em;
+            text-align: right;
+        }
+        .credito {
+            background-color: #fff;
+            color: #000;
+            display: inline-block;
+        }
+    }
+
+}
+
+/* -------------------------------------------- */
+/* ------------ Artículos ------------------- */
+/* -------------------------------------------- */
+.embed
+{
+    min-height: 100vh;
+    background-color: $amarillo;
+    //border: 2px solid $rosa_mutante;
+    padding-bottom:1em;
+    min-width:100%; 
+    max-width:100%; 
+    position:relative; 
+    top:0;
+    left:0; 
+    margin:0; 
+    padding-top:56.25%;
+        &__map {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border: none;
+    }
+}
+
+.mapa {
+    border: 2px solid $amarillo;
+    background-color: $amarillo;
+}
+
+
+.mapa, .glosario
+{
+    position: relative;
+    top:0;
+    width: 100%;
+    padding-bottom: 0;
+    margin: 0;
+    
+    &__texto
+     {
+         width: 50%;
+         padding-top: 4em;
+         margin-top: 2em;
+         margin-left: auto; 
+         margin-right: auto;
+
+         h2 {
+            font-family: 'titulos', sans-serif;
+            font-size: 3.3em;
+            margin-bottom: 1em;
+            margin-top: 0;
+            text-align: center;
+            color: $negro;
+            text-transform: uppercase;
+        }    
+
+        h3 {
+            font-family: 'titulos', sans-serif;
+            font-size: 2em; 
+            margin-bottom: 1em;
+            margin-top: 1em;
+            text-align: center;
+            color: $negro;
+            text-transform: uppercase;
+        }    
+
+     }
+}
+
+.glosario {
+    border: 2px solid $negro;
+    background-color: $negro;
+    color: $gris_mutante;
+    h2 {
+        color: #fff;
+    }
+    h3 {
+        color: #fff;
+    }
+    h4 {
+        color: $amarillo;
+    }
+}
+
+.articulos
+{
+    border: 2px solid $naranja_mutante;
+    min-width:100%;
+    min-height: 100vh;
+    padding-bottom: 8em;
+    background-color: $naranja_mutante;
+    
+    p {color: #fff;}
+
+    &__texto
+     {
+         width: 50%;
+         padding-top: 4em;
+         margin-top: 2em;
+         margin-left: auto; 
+         margin-right: auto;
+
+         h2 {
+            font-family: 'titulos', sans-serif;
+            font-size: 3.3em;
+            margin-bottom: 1em;
+            margin-top: 0;
+            text-align: center;
+            color: $amarillo;
+            text-transform: uppercase;
+        }    
+
+        small {
+            color:#fff;
+            font-weight: bold;
+            font-size: 1em;
+            letter-spacing: 2px;
+        }
+     }
+
+
+     &__acordion {
+            width: 80%;
+            margin-top: 5em;
+            margin-left: auto;
+            margin-right: auto;
+          
+            li
+            {
+                width: 100%;
+                height: 18em;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                margin-bottom: 3em;
+                border-radius: 10px;
+                cursor: pointer;
+                
+                transition: all .8s;
+
+                .foto
+                {
+                    position: relative;       
+                    display: block;
+                    width:50%;
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    background-size: cover;
+                    background-position: center;
+                    small
+                    {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        display: inline-block;
+                        background-color: $negro; 
+                        color: $amarillo;
+                        padding-bottom: 3px;
+                    }
+                }
+
+                .col_1
+                {
+                    background-image: url("https://mutante.org/wp-content/uploads/2025/01/Banner-articulo_Banner_Desktop.png");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: top left, top right;
+                }
+                
+                .col_2 
+                {
+                    background-image: url("https://mutante.org/wp-content/uploads/2025/01/Banner-jpg.webp");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: bottom left, top right;
+                }
+
+                .col_3 
+                {
+                    background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop_11zon.jpg");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: bottom left, top right;
+                }
+
+                .col_4 
+                {
+                    background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop-2-jpg.webp");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: bottom left, top right;
+                }
+
+                .texto
+                {
+                    width: 50%;
+                    text-align: left;
+                    h3
+                    {
+                        font-family: 'titulos', sans-serif;
+                        text-transform: uppercase;
+                        color: $amarillo;
+                        letter-spacing: 1px;
+                        margin-bottom: 0.5em;
+                    }
+
+                    p {
+                        line-height: 120%;
+                    }
+                 
+                    .fecha
+                    {
+                        color: #fff;
+                        font-style: italic;
+                    }
+                }
+                
+                &:hover {
+                    transform: translateX(-30px);
+                    background-color: #fff;
+                }
+                &:hover .foto {
+                    border-right: solid 10px $verde_mutante;
+                    small
+                    {
+                        color: $negro;
+                        background-color: $amarillo;
+                    }
+                }
+                &:hover h3 {
+                    color: $negro;
+                }
+                
+                &:hover .fecha, &:hover p
+                {
+                    color: #000;
+                }       
+
+            }
+
+        }
+}
+
+/*--------------------------------------------- */
+/*----------- botón descarga -------------- */
+/*--------------------------------------------- */
+#btn_guia
+{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    bottom: 45%;
+    right: 20px;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all .6s;
+    border: $verde_mutante solid 1px;
+
+    img {
+        width: 70%;
+    }
+    small
+    {
+        margin-top: 10px;
+        background-color: #fff;
+        padding: 2px 5px;
+        text-align: center;
+        background-color: $verde_mutante;
+        color: #fff;
+    }
+
+    &:hover
+    {
+        transform: translateX(-30px);
+        border: $rosa_mutante solid 1px;
+    }
+
+    &:hover small
+    {
+        background-color: $rosa_mutante;
+    }
+}
+
+/* -------------------------------------------- */
+/* ------------ Datos de resumen -------------- */
+/* -------------------------------------------- */
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// BREAKPOINTS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1000px)
+{
+
+        .articulos__acordion
+        {
+            width:90%;
+        }
+}
+
+@media (max-width: 970px)
+{
+        .intro__texto, .articulos__texto
+        {
+            width: 80%;
+        }
+        
+}
+
+@media (max-width: 850px)
+{
+    .articulos__acordion 
+    {
+        margin-right: 1em;
+        li
+        {
+            width:100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 30em;
+            
+            .foto
+            {
+                width: 100%;
+                height: 60%;
+            }
+
+            .texto
+            {
+                width: 100%;
+                height: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 730px)
+{
+    .intro__texto, .articulos__texto li
+        {
+            width: 95%;
+        }
+
+        .tres_datos
+        {
+            flex-wrap: wrap;
+            .resumen_datos
+            {
+                width: 40%;
+            }
+        }
+
+        .fotografia__nota {
+            width: 95%;
+            bottom: 5px;
+            .pie {
+                font-size: 0.8em;
+            }
+        }
+
+        .fotografia__grullas
+        {
+            bottom: -30px;
+            left: 0;
+            height: 70%;
+            width: 100%;    
+            background-size: 50%;
+        }
+}
+
+
+@media (max-width: 570px)
+{
+
+    #btn_guia
+    {
+        bottom: 5%;
+        right: 10px;
+    }
+        .tres_datos
+        {
+            flex-wrap: wrap;
+            .resumen_datos
+            {
+                width: 80%;
+            }
+        }
+
+    
+}
+
+@media (max-width: 545px)
+{
+    .articulos__acordion 
+    {
+        li {
+            height: 32em;
+        }
+    }
+}
+
+@media (max-width: 485px)
+{
+
+    .fotografia
+    {
+        background-attachment: inherit;
+            &__grullas
+            {
+                bottom: -50px;
+                height: 60%;
+            }
+    }
+}

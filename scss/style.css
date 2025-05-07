@@ -1,0 +1,701 @@
+@charset "UTF-8";
+/* fuentes locales*/
+@font-face {
+  font-family: "texto";
+  src: url("../assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+@font-face {
+  font-family: "titulos";
+  src: url("../assets/fonts/Denim/Denim-Bold.otf");
+}
+@font-face {
+  font-family: "leyenda";
+  src: url("../assets/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf");
+}
+/* -------------*/
+/* colores */
+/* -------------*/
+/* inicializar propiedades*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 70px;
+  font-family: "texto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.aglos {
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 2px #e01e5a dotted;
+}
+.aglos:hover {
+  color: #e01e5a;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  margin: 1em auto 1em auto;
+  font-family: "texto", sans-serif;
+  font-size: 0.8em;
+}
+
+.footer {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 3em 0 3em 0;
+}
+.footer__logo {
+  width: 15%;
+  margin: 1em;
+}
+.footer__logo-img {
+  width: 100%;
+}
+
+.container-fluid {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 8px 60px black;
+  z-index: 2;
+}
+
+.navbar-brand img {
+  width: 160px;
+}
+
+.navbar-toggler {
+  width: 60px;
+  height: 50px;
+  padding: 5px;
+}
+.navbar-toggler:hover .mLine {
+  stroke: #92ff64;
+}
+.navbar-toggler:hover {
+  border-color: #92ff64;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "titulos", sans-serif;
+  text-transform: uppercase;
+}
+.navbar-nav .nav-item {
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: border-bottom 0.3s linear;
+}
+.navbar-nav .nav-item a {
+  color: black;
+  border-bottom: 4px #fff solid;
+}
+.navbar-nav .nav-item a:hover {
+  color: #92ff64;
+  border-bottom: 4px #92ff64 solid;
+}
+
+.mouse-scroll {
+  display: block;
+}
+
+#ancla2 {
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.mouse-scroll span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  margin: 0 0 3px 5px;
+}
+
+.mouse-scroll .mouse {
+  height: 21px;
+  width: 14px;
+  border-radius: 10px;
+  transform: none;
+  border: 2px solid #fff;
+  top: 170px;
+}
+
+.mouse-scroll .down-arrow-1 {
+  margin-top: 6px;
+}
+
+.mouse-scroll .down-arrow-1, .mouse-scroll .down-arrow-2, .mouse-scroll .down-arrow-3 {
+  animation: mouse-scroll 1s infinite;
+}
+
+.mouse-scroll .down-arrow-1 {
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+}
+
+.mouse-scroll .down-arrow-2 {
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+}
+
+.mouse-scroll .down-arrow-3 {
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+
+.mouse-scroll .mouse-in {
+  height: 5px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: #fff;
+  position: relative;
+}
+
+.mouse-scroll .mouse-in {
+  animation: animated-mouse 1.2s ease infinite;
+}
+
+@keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 990px) {
+  .navbar-brand img {
+    width: 140px;
+  }
+  .nav-item a {
+    padding: 0;
+    margin: 0;
+  }
+}
+/* -------------------------------------------- */
+/* ------------ intro ------------------- */
+/* -------------------------------------------- */
+.intro {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 40px;
+  background-color: #f9ff32;
+}
+.intro__texto {
+  width: 50%;
+  padding-top: 2em;
+}
+
+.intro h1 {
+  font-family: "titulos", sans-serif;
+  text-transform: uppercase;
+  font-size: 5em;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #000000;
+}
+
+.intro h2 {
+  font-family: "leyenda", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: 2em;
+  text-align: center;
+  color: #000000;
+}
+
+.intro small, .mapa small {
+  color: #e01e5a;
+  font-weight: bold;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+
+.intro .fecha {
+  color: #000000;
+  font-style: italic;
+  line-height: 250%;
+}
+
+.descargar__guia {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 5px;
+  width: 205px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 7px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0.8;
+  transition: all 0.6s;
+  margin-bottom: 5em;
+}
+.descargar__guia img {
+  display: block;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+.descargar__guia small {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+  color: #000000;
+}
+
+.descargar__guia:hover {
+  opacity: 1;
+  transform: translateY(-30px);
+  border: solid 1px #e01e5a;
+}
+
+.descargar__guia:hover small {
+  color: #e01e5a;
+}
+
+/* -------------------------------------------- */
+/* ------------- Fotografía -------------------- */
+/* -------------------------------------------- */
+.fotografia {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("https://mutante.org/especiales/mural-cuchas/evidencias/13.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* &__grullas
+   {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       height: 100%;
+       width: 100%;    
+       background-image: url("../assets/guia/grullas_verdes.svg");
+       background-size: 50%;
+       opacity: 0.5;
+       background-repeat: no-repeat;
+
+  // background-attachment: fixed;
+   }*/
+}
+.fotografia__nota {
+  position: absolute;
+  right: 20px;
+  bottom: 10%;
+  width: 55%;
+  font-family: "leyenda", sans-serif;
+}
+.fotografia__nota .pie {
+  color: #fff;
+  font-size: 1em;
+  text-align: right;
+}
+.fotografia__nota .credito {
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+}
+
+/* -------------------------------------------- */
+/* ------------ Artículos ------------------- */
+/* -------------------------------------------- */
+.embed {
+  min-height: 100vh;
+  background-color: #f9ff32;
+  padding-bottom: 1em;
+  min-width: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 56.25%;
+}
+.embed__map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+}
+
+.mapa {
+  border: 2px solid #f9ff32;
+  background-color: #f9ff32;
+}
+
+.mapa, .glosario {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding-bottom: 0;
+  margin: 0;
+}
+.mapa__texto, .glosario__texto {
+  width: 50%;
+  padding-top: 4em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mapa__texto h2, .glosario__texto h2 {
+  font-family: "titulos", sans-serif;
+  font-size: 3.3em;
+  margin-bottom: 1em;
+  margin-top: 0;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+.mapa__texto h3, .glosario__texto h3 {
+  font-family: "titulos", sans-serif;
+  font-size: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.glosario {
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #e5e6df;
+}
+.glosario h2 {
+  color: #fff;
+}
+.glosario h3 {
+  color: #fff;
+}
+.glosario h4 {
+  color: #f9ff32;
+}
+
+.articulos {
+  border: 2px solid #ff5700;
+  min-width: 100%;
+  min-height: 100vh;
+  padding-bottom: 8em;
+  background-color: #ff5700;
+}
+.articulos p {
+  color: #fff;
+}
+.articulos__texto {
+  width: 50%;
+  padding-top: 4em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.articulos__texto h2 {
+  font-family: "titulos", sans-serif;
+  font-size: 3.3em;
+  margin-bottom: 1em;
+  margin-top: 0;
+  text-align: center;
+  color: #f9ff32;
+  text-transform: uppercase;
+}
+.articulos__texto small {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+.articulos__acordion {
+  width: 80%;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.articulos__acordion li {
+  width: 100%;
+  height: 18em;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 3em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.articulos__acordion li .foto {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+.articulos__acordion li .foto small {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  background-color: #000000;
+  color: #f9ff32;
+  padding-bottom: 3px;
+}
+.articulos__acordion li .col_1 {
+  background-image: url("https://mutante.org/wp-content/uploads/2025/01/Banner-articulo_Banner_Desktop.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top left, top right;
+}
+.articulos__acordion li .col_2 {
+  background-image: url("https://mutante.org/wp-content/uploads/2025/01/Banner-jpg.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom left, top right;
+}
+.articulos__acordion li .col_3 {
+  background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop_11zon.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom left, top right;
+}
+.articulos__acordion li .col_4 {
+  background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop-2-jpg.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom left, top right;
+}
+.articulos__acordion li .texto {
+  width: 50%;
+  text-align: left;
+}
+.articulos__acordion li .texto h3 {
+  font-family: "titulos", sans-serif;
+  text-transform: uppercase;
+  color: #f9ff32;
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+}
+.articulos__acordion li .texto p {
+  line-height: 120%;
+}
+.articulos__acordion li .texto .fecha {
+  color: #fff;
+  font-style: italic;
+}
+.articulos__acordion li:hover {
+  transform: translateX(-30px);
+  background-color: #fff;
+}
+.articulos__acordion li:hover .foto {
+  border-right: solid 10px #92ff64;
+}
+.articulos__acordion li:hover .foto small {
+  color: #000000;
+  background-color: #f9ff32;
+}
+.articulos__acordion li:hover h3 {
+  color: #000000;
+}
+.articulos__acordion li:hover .fecha, .articulos__acordion li:hover p {
+  color: #000;
+}
+
+/*--------------------------------------------- */
+/*----------- botón descarga -------------- */
+/*--------------------------------------------- */
+#btn_guia {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  bottom: 45%;
+  right: 20px;
+  z-index: 3;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.6s;
+  border: #92ff64 solid 1px;
+}
+#btn_guia img {
+  width: 70%;
+}
+#btn_guia small {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 2px 5px;
+  text-align: center;
+  background-color: #92ff64;
+  color: #fff;
+}
+#btn_guia:hover {
+  transform: translateX(-30px);
+  border: #e01e5a solid 1px;
+}
+#btn_guia:hover small {
+  background-color: #e01e5a;
+}
+
+/* -------------------------------------------- */
+/* ------------ Datos de resumen -------------- */
+/* -------------------------------------------- */
+@media (max-width: 1000px) {
+  .articulos__acordion {
+    width: 90%;
+  }
+}
+@media (max-width: 970px) {
+  .intro__texto, .articulos__texto {
+    width: 80%;
+  }
+}
+@media (max-width: 850px) {
+  .articulos__acordion {
+    margin-right: 1em;
+  }
+  .articulos__acordion li {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30em;
+  }
+  .articulos__acordion li .foto {
+    width: 100%;
+    height: 60%;
+  }
+  .articulos__acordion li .texto {
+    width: 100%;
+    height: 40%;
+  }
+}
+@media (max-width: 730px) {
+  .intro__texto, .articulos__texto li {
+    width: 95%;
+  }
+  .tres_datos {
+    flex-wrap: wrap;
+  }
+  .tres_datos .resumen_datos {
+    width: 40%;
+  }
+  .fotografia__nota {
+    width: 95%;
+    bottom: 5px;
+  }
+  .fotografia__nota .pie {
+    font-size: 0.8em;
+  }
+  .fotografia__grullas {
+    bottom: -30px;
+    left: 0;
+    height: 70%;
+    width: 100%;
+    background-size: 50%;
+  }
+}
+@media (max-width: 570px) {
+  #btn_guia {
+    bottom: 5%;
+    right: 10px;
+  }
+  .tres_datos {
+    flex-wrap: wrap;
+  }
+  .tres_datos .resumen_datos {
+    width: 80%;
+  }
+}
+@media (max-width: 545px) {
+  .articulos__acordion li {
+    height: 32em;
+  }
+}
+@media (max-width: 485px) {
+  .fotografia {
+    background-attachment: inherit;
+  }
+  .fotografia__grullas {
+    bottom: -50px;
+    height: 60%;
+  }
+}/*# sourceMappingURL=style.css.map */
