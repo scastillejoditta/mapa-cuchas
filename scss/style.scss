@@ -17,7 +17,7 @@
 /* colores */
 $gris_mutante: #e5e6df;
 $verde_mutante: #92ff64;
-$rosa_mutante: #e01e5a;
+$rosa_mutante: #FF2800;
 $azul_mutante: #5da2f8;// #040404;
 $verde_ocuro_mutante: #00c25e;
 $naranja_mutante:#ff5700;
@@ -39,6 +39,10 @@ body
     font-family: 'texto', sans-serif;
 }
 
+body p 
+{
+line-height:170%;
+}
 a {
     text-decoration: none;
 }
@@ -300,6 +304,7 @@ footer p {
     text-transform: uppercase;
     font-size: 5em;
     margin-bottom: 5px;
+    margin-top:0.2em;
     text-align: center;
     color: $negro;
 }
@@ -307,7 +312,7 @@ footer p {
 .intro h2 {
     font-family: 'leyenda', sans-serif;
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-top: 0;
     margin-bottom: 2em;
     text-align: center;
@@ -316,8 +321,8 @@ footer p {
 
 .intro small, .mapa small {
    color:$rosa_mutante;
-    font-weight: bold;
-    font-size: 0.8em;
+//    font-weight: bold;
+    font-size: 1em;
     letter-spacing: 2px;
 }
 .intro .fecha { color: $negro; font-style: italic; line-height:250%;}
@@ -378,7 +383,7 @@ footer p {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url("../assets/images/collage.jpg");// url("https://mutante.org/especiales/mural-cuchas/evidencias/13.jpeg"); 
+    background-image:url("https://mutante.org/especiales/mural-cuchas/evidencias/13.jpeg");// url("../assets/images/collage.jpg");//url("../assets/images/collagemurales.webp");  
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -393,7 +398,7 @@ footer p {
         left: 0;
         height: 100%;
         width: 100%;    
-        background-image: url("../assets/guia/grullas_verdes.svg");
+        background-image: url("../assets/images/censura_grullas.svg");//url("../assets/guia/grullas_verdes.svg");
         background-size: 50%;
         opacity: 0.5;
         background-repeat: no-repeat;
@@ -407,7 +412,7 @@ footer p {
         right: 20px;
         bottom: 10%;
         width: 55%;
-        font-family: 'leyenda', sans-serif;
+        font-family: 'texto', sans-serif;
 
         .pie {
             color: #fff;
@@ -418,6 +423,8 @@ footer p {
             background-color: #fff;
             color: #000;
             display: inline-block;
+            font-size: 0.8em;
+            line-height:150%;
         }
     }
 
@@ -430,7 +437,7 @@ footer p {
 {
     min-height: 100vh;
     background-color: $amarillo;
-    //border: 2px solid $rosa_mutante;
+    border: 2px solid $amarillo;
     padding-bottom:1em;
     min-width:100%; 
     max-width:100%; 
@@ -440,12 +447,12 @@ footer p {
     margin:0; 
     padding-top:56.25%;
         &__map {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        border: none;
+        position: absolute !important;
+        height: 100% !important;
+        width: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        border: 2px solid $amarillo;
     }
 }
 
@@ -475,7 +482,7 @@ footer p {
             font-family: 'titulos', sans-serif;
             font-size: 3.3em;
             margin-bottom: 1em;
-            margin-top: 0;
+            margin-top: 0.3em;
             text-align: center;
             color: $negro;
             text-transform: uppercase;
@@ -531,7 +538,7 @@ footer p {
             font-family: 'titulos', sans-serif;
             font-size: 3.3em;
             margin-bottom: 1em;
-            margin-top: 0;
+            margin-top: 0.3em;
             text-align: center;
             color: $amarillo;
             text-transform: uppercase;
@@ -548,6 +555,7 @@ footer p {
 
      &__acordion {
             width: 80%;
+            max-width: 1000px;
             margin-top: 5em;
             margin-left: auto;
             margin-right: auto;
