@@ -43,13 +43,10 @@ body p
 {
 line-height:170%;
 }
+
 a {
     text-decoration: none;
-}
-
-.aglos {
-    text-decoration: none;
-    color: $negro;
+    color: $rosa_mutante;
     border-bottom: 2px $rosa_mutante dotted;
     
     &:hover
@@ -118,6 +115,9 @@ footer p {
 {
   width: 160px;
 }
+
+.navbar-brand
+{border: none;}
 
 .navbar-toggler
 {
@@ -502,21 +502,73 @@ footer p {
 
 .cierre {
     margin-bottom: 7em;
+    margin-top: 0;
 }
 
 .glosario {
     border: 2px solid $negro;
     background-color: $negro;
     color: $gris_mutante;
-    h2 {
-        color: #fff;
+    &__texto
+    {
+        h2 {
+            color: #fff;
+        }
+        h3 {
+            color: #fff;
+        }
+        h4 {
+            color: $amarillo;
+        }
+        h5 { 
+            display: inline-block;
+            font-family: 'titulos', sans-serif;
+            text-transform: uppercase;
+            color: #fff;
+            line-height: 100%;
+        }
+        span {
+            color: $rosa_mutante;
+            display: block;
+            line-height: 150%;
+        }
+        
+        &_colofon
+        {
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 80%;
+        }
     }
-    h3 {
-        color: #fff;
+}
+.fondofinal
+{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url("../assets/images/banner_cuchas.PNG");
+    background-size: cover;
+    //background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    &__negro
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;    
+        background-size: 100%;
+        background: linear-gradient(to bottom, black 0%, transparent 70%);
+        opacity: 1;
+        background-repeat: no-repeat;
+        
+   // background-attachment: fixed;
     }
-    h4 {
-        color: $amarillo;
-    }
+
 }
 
 .articulos
@@ -681,55 +733,6 @@ footer p {
 
         }
 }
-
-/*--------------------------------------------- */
-/*----------- botón descarga -------------- */
-/*--------------------------------------------- */
-#btn_guia
-{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    width: 80px;
-    bottom: 45%;
-    right: 20px;
-    z-index: 3;
-    border-radius: 50%;
-    background-color: #fff;
-    transition: all .6s;
-    border: $verde_mutante solid 1px;
-
-    img {
-        width: 70%;
-    }
-    small
-    {
-        margin-top: 10px;
-        background-color: #fff;
-        padding: 2px 5px;
-        text-align: center;
-        background-color: $verde_mutante;
-        color: #fff;
-    }
-
-    &:hover
-    {
-        transform: translateX(-30px);
-        border: $rosa_mutante solid 1px;
-    }
-
-    &:hover small
-    {
-        background-color: $rosa_mutante;
-    }
-}
-
-/* -------------------------------------------- */
-/* ------------ Datos de resumen -------------- */
-/* -------------------------------------------- */
 
 
 

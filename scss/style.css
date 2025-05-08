@@ -33,14 +33,10 @@ body p {
 
 a {
   text-decoration: none;
-}
-
-.aglos {
-  text-decoration: none;
-  color: #000000;
+  color: #FF2800;
   border-bottom: 2px #FF2800 dotted;
 }
-.aglos:hover {
+a:hover {
   color: #FF2800;
 }
 
@@ -93,6 +89,10 @@ footer p {
 
 .navbar-brand img {
   width: 160px;
+}
+
+.navbar-brand {
+  border: none;
 }
 
 .navbar-toggler {
@@ -435,6 +435,7 @@ footer p {
 
 .cierre {
   margin-bottom: 7em;
+  margin-top: 0;
 }
 
 .glosario {
@@ -442,14 +443,55 @@ footer p {
   background-color: #000000;
   color: #e5e6df;
 }
-.glosario h2 {
+.glosario__texto h2 {
   color: #fff;
 }
-.glosario h3 {
+.glosario__texto h3 {
   color: #fff;
 }
-.glosario h4 {
+.glosario__texto h4 {
   color: #f9ff32;
+}
+.glosario__texto h5 {
+  display: inline-block;
+  font-family: "titulos", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 100%;
+}
+.glosario__texto span {
+  color: #FF2800;
+  display: block;
+  line-height: 150%;
+}
+.glosario__texto_colofon {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 80%;
+}
+
+.fondofinal {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url("../assets/images/banner_cuchas.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+.fondofinal__negro {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background: linear-gradient(to bottom, black 0%, transparent 70%);
+  opacity: 1;
+  background-repeat: no-repeat;
 }
 
 .articulos {
@@ -582,47 +624,6 @@ footer p {
   color: #000;
 }
 
-/*--------------------------------------------- */
-/*----------- botón descarga -------------- */
-/*--------------------------------------------- */
-#btn_guia {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  width: 80px;
-  bottom: 45%;
-  right: 20px;
-  z-index: 3;
-  border-radius: 50%;
-  background-color: #fff;
-  transition: all 0.6s;
-  border: #92ff64 solid 1px;
-}
-#btn_guia img {
-  width: 70%;
-}
-#btn_guia small {
-  margin-top: 10px;
-  background-color: #fff;
-  padding: 2px 5px;
-  text-align: center;
-  background-color: #92ff64;
-  color: #fff;
-}
-#btn_guia:hover {
-  transform: translateX(-30px);
-  border: #FF2800 solid 1px;
-}
-#btn_guia:hover small {
-  background-color: #FF2800;
-}
-
-/* -------------------------------------------- */
-/* ------------ Datos de resumen -------------- */
-/* -------------------------------------------- */
 @media (max-width: 1000px) {
   .articulos__acordion {
     width: 90%;
