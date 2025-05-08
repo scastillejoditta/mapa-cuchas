@@ -334,7 +334,7 @@ footer p {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url("https://mutante.org/especiales/mural-cuchas/evidencias/13.jpeg");
+  background-image: url("https://mutante.org/especiales/mural-cuchas/evidencias/19.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -482,7 +482,6 @@ footer p {
 }
 .articulos__texto small {
   color: #fff;
-  font-weight: bold;
   font-size: 1em;
   letter-spacing: 2px;
 }
