@@ -383,7 +383,7 @@ footer p {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image:url("https://mutante.org/especiales/mural-cuchas/evidencias/19.jpg");// url("../assets/images/collage.jpg");//url("../assets/images/collagemurales.webp");  
+    background-image:url("../assets/images/fotomapacuchas.png");//url("../assets/images/collagemurales.webp");  
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -418,6 +418,8 @@ footer p {
             color: #fff;
             font-size: 1em;
             text-align: right;
+            background-color: #000;
+            line-height: 120%;
         }
         .credito {
             background-color: #fff;
