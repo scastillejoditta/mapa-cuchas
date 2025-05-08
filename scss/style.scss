@@ -288,23 +288,35 @@ footer p {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 50px 40px;
+    padding: 60px 40px;
     background-color: $amarillo; //#18a477;
     
     
     &__texto
      {
          width: 50%;
-         padding-top: 2em;
+
+         &__entradilla
+         {
+            font-size: 1em;
+            font-family: 'leyenda', sans-serif;
+            margin-bottom:3em;
+         }
+
+         &__introduccion
+         {
+            margin-top: 1em;
+         }
      }
 }
 
 .intro h1 {
     font-family: 'titulos', sans-serif;
+    line-height: 100%;
     text-transform: uppercase;
     font-size: 5em;
-    margin-bottom: 5px;
-    margin-top:0.2em;
+    margin-bottom: 0;
+    margin-top:0.1em;
     text-align: center;
     color: $negro;
 }
@@ -314,18 +326,19 @@ footer p {
     text-transform: uppercase;
     font-size: 1.4em;
     margin-top: 0;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     text-align: center;
     color: $negro;
 }
 
 .intro small, .mapa small {
    color:$rosa_mutante;
-//    font-weight: bold;
     font-size: 1em;
     letter-spacing: 2px;
 }
-.intro .fecha { color: $negro; font-style: italic; line-height:250%;}
+.intro .fecha { 
+    font-size: 0.8em;
+}
 
 
 .descargar__guia
@@ -361,7 +374,6 @@ footer p {
         color: $negro;
     }
 }
-
 
 .descargar__guia:hover {
     opacity: 1;
@@ -401,7 +413,7 @@ footer p {
 
         .pie {
             color: #fff;
-            font-size: 1em;
+            font-size: 0.8em;
             text-align: right;
             background-color: #000;
             line-height: 120%;
@@ -486,6 +498,10 @@ footer p {
         }    
 
      }
+}
+
+.cierre {
+    margin-bottom: 7em;
 }
 
 .glosario {
@@ -602,7 +618,7 @@ footer p {
 
                 .col_3 
                 {
-                    background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop_11zon.jpg");
+                    background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop-2-jpg.webp");
                     background-repeat: no-repeat;
                     background-size: 100%;
                     background-position: bottom left, top right;
@@ -610,7 +626,7 @@ footer p {
 
                 .col_4 
                 {
-                    background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop-2-jpg.webp");
+                    background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop_11zon.jpg");
                     background-repeat: no-repeat;
                     background-size: 100%;
                     background-position: bottom left, top right;
