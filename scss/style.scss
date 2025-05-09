@@ -20,7 +20,7 @@ $verde_mutante: #92ff64;
 $rosa_mutante: #FF2800;
 $azul_mutante: #5da2f8;// #040404;
 $verde_ocuro_mutante: #00c25e;
-$naranja_mutante:#ff5700;
+$naranja_mutante:#FFAAA5;
 $negro:#000000;
 $amarillo:#f9ff32;
 
@@ -524,18 +524,18 @@ footer p {
             display: inline-block;
             font-family: 'titulos', sans-serif;
             text-transform: uppercase;
-            color: #fff;
+            color: $amarillo;
             line-height: 100%;
         }
         span {
-            color: $rosa_mutante;
+            color: $amarillo;
             display: block;
             line-height: 150%;
         }
         
         &_colofon
         {
-            color: #fff;
+            color: $amarillo;
             width: 100%;
             text-align: center;
             text-transform: uppercase;
@@ -543,6 +543,12 @@ footer p {
         }
     }
 }
+.creditos
+{
+    text-align: center;
+}
+.creditos h2 {color: $amarillo;}
+
 .fondofinal
 {
     position: relative;
@@ -573,13 +579,13 @@ footer p {
 
 .articulos
 {
-    border: 2px solid $naranja_mutante;
+    border: 2px solid $amarillo;
     min-width:100%;
     min-height: 100vh;
     padding-bottom: 8em;
-    background-color: $naranja_mutante;
+    background-color: $amarillo;
     
-    p {color: #fff;}
+    p {color: $negro;}
 
     &__texto
      {
@@ -595,12 +601,12 @@ footer p {
             margin-bottom: 1em;
             margin-top: 0.3em;
             text-align: center;
-            color: $amarillo;
+            color: $negro;
             text-transform: uppercase;
         }    
 
         small {
-            color:#fff;
+            color:$rosa_mutante;
             //font-weight: bold;
             font-size: 1em;
             letter-spacing: 2px;
@@ -692,7 +698,7 @@ footer p {
                     {
                         font-family: 'titulos', sans-serif;
                         text-transform: uppercase;
-                        color: $amarillo;
+                        color: $negro;
                         letter-spacing: 1px;
                         margin-bottom: 0.5em;
                     }
@@ -703,7 +709,7 @@ footer p {
                  
                     .fecha
                     {
-                        color: #fff;
+                        color: $rosa_mutante;
                         font-style: italic;
                     }
                 }

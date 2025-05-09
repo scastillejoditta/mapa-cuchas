@@ -456,20 +456,28 @@ footer p {
   display: inline-block;
   font-family: "titulos", sans-serif;
   text-transform: uppercase;
-  color: #fff;
+  color: #f9ff32;
   line-height: 100%;
 }
 .glosario__texto span {
-  color: #FF2800;
+  color: #f9ff32;
   display: block;
   line-height: 150%;
 }
 .glosario__texto_colofon {
-  color: #fff;
+  color: #f9ff32;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
   line-height: 80%;
+}
+
+.creditos {
+  text-align: center;
+}
+
+.creditos h2 {
+  color: #f9ff32;
 }
 
 .fondofinal {
@@ -495,14 +503,14 @@ footer p {
 }
 
 .articulos {
-  border: 2px solid #ff5700;
+  border: 2px solid #f9ff32;
   min-width: 100%;
   min-height: 100vh;
   padding-bottom: 8em;
-  background-color: #ff5700;
+  background-color: #f9ff32;
 }
 .articulos p {
-  color: #fff;
+  color: #000000;
 }
 .articulos__texto {
   width: 50%;
@@ -517,11 +525,11 @@ footer p {
   margin-bottom: 1em;
   margin-top: 0.3em;
   text-align: center;
-  color: #f9ff32;
+  color: #000000;
   text-transform: uppercase;
 }
 .articulos__texto small {
-  color: #fff;
+  color: #FF2800;
   font-size: 1em;
   letter-spacing: 2px;
 }
@@ -595,7 +603,7 @@ footer p {
 .articulos__acordion li .texto h3 {
   font-family: "titulos", sans-serif;
   text-transform: uppercase;
-  color: #f9ff32;
+  color: #000000;
   letter-spacing: 1px;
   margin-bottom: 0.5em;
 }
@@ -603,7 +611,7 @@ footer p {
   line-height: 120%;
 }
 .articulos__acordion li .texto .fecha {
-  color: #fff;
+  color: #FF2800;
   font-style: italic;
 }
 .articulos__acordion li:hover {
